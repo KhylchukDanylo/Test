@@ -1,3 +1,30 @@
-bady {
-    bottom: fe;
+.giv {
+  width: 1200px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-active {
+  border: 5px solid blue;
+  border-radius: 50%;
+}
+
+.icon-active:hover,
+.icon-active:focus {
+  border: 5px solid red;
+  border-radius: 50%;
+}
+
+
+.icon,
+.icon-active,
+.giv {
+    fill: black;
+    color: red;
+}
+
+.icon-active svg {
+    fill: red;
 }
