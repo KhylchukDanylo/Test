@@ -28,3 +28,43 @@
 .icon-active svg {
     fill: red;
 }
+
+
+.icon-Vector-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #00000010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.icon-Vector-btn:hover {
+  cursor: alias;
+
+}
+
+.moder-fon {
+ 
+  width: 1000px;
+  height: 1000px;
+  background-color: #00000010;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.moder {
+
+   position: relative;
+  width: 150px;
+  height: 200px;
+  background-color: #fff;
+
+}
