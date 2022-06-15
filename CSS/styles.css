@@ -1,70 +1,15 @@
-.giv {
-  width: 1200px;
-  height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.box {
+  position: relative;
+}
+.img-box {
+  
 }
 
-.icon-active {
-  border: 5px solid blue;
-  border-radius: 50%;
-}
-
-.icon-active:hover,
-.icon-active:focus {
-  border: 5px solid red;
-  border-radius: 50%;
-}
-
-
-.icon,
-.icon-active,
-.giv {
-    fill: black;
-    color: red;
-}
-
-.icon-active svg {
-    fill: red;
-}
-
-
-.icon-Vector-btn {
+.text {
   position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 1px solid #00000010;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-}
-
-.icon-Vector-btn:hover {
-  cursor: alias;
-
-}
-
-.moder-fon {
- 
-  width: 1000px;
-  height: 1000px;
-  background-color: #00000010;
-    display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-
-.moder {
-
-   position: relative;
-  width: 150px;
-  height: 200px;
-  background-color: #fff;
+  transform: rotateX(100%);
+  width: 370px;
+  height: 367.5px;
+  background-color: rgba(33, 150, 243, 0.9);;
 
 }
