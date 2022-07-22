@@ -118,7 +118,7 @@ body {
   border: none;
 }
 
-.hero-fon__photo {
+.hero-fon {
   position: absolute;
   width: 346px;
   height: 344px;
@@ -127,12 +127,11 @@ body {
   background-color: #ffa5ba;
   padding: 0;
   top: 83px;
-  left: 36px;
-  overflow: hidden;
+  left: 10vw;
 }
 
 .hero-img__slider {
   position: absolute;
-  top: 92px;
-  right: 32px;
+  top: 9px;
+  left: 81px;
 }
