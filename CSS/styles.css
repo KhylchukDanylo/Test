@@ -40,14 +40,14 @@ body {
   overflow: hidden;
 }
 
-.hero-content {
+.hero__content {
   position: relative;
   z-index: 1;
 
   margin-top: 194px;
 }
 
-.hero-title {
+.hero__title {
   font-family: "Titan One";
   font-style: normal;
   font-weight: 400;
@@ -62,11 +62,11 @@ body {
   margin-bottom: 20px;
 }
 
-.hero-list__btn {
+.hero-list {
   display: flex;
 }
 
-.hero-item__btn:nth-child(2) {
+.hero-list__item:nth-child(2) {
   margin-left: 8px;
 }
 
@@ -83,7 +83,7 @@ body {
   color: #d41443;
 }
 
-.hero-btn__products {
+.item-btn__products {
   background: #d41443;
   border-radius: 20px;
   font-family: "DM Sans";
@@ -100,7 +100,7 @@ body {
   padding: 8px 14px;
 }
 
-.rhero-btn__made {
+.item-btn__made {
   font-family: "DM Sans";
   font-style: normal;
   font-weight: 400;
