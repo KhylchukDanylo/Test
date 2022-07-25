@@ -4,49 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./CSS/styles.css" />
     <title>Document</title>
+    <link rel="stylesheet" href="./CSS/styles.css" />
   </head>
   <body>
-    <header></header>
-    <section class="hero">
-      <div class="container">
-        <div class="hero__content">
-          <h1 class="hero__title">
-            ice cream made with <span class="hero__title-passion">passion</span>
-          </h1>
-          <ul class="hero-list">
-            <li class="hero-list__item">
-              <button class="item-btn__products" type="button">Products</button>
-            </li>
-            <li class="hero-list__item"">
-              <button class="item-btn__made" type="button">
-                How it’s made?
-              </button>
-            </li>
-          </ul>
-        </div>
-        <div class="hero-fon">
-          
-          <picture>
-            <source
-              srcset="
-                ./images/slider-pic71-mob-min.png    1x,
-                ./images/slider-pic71-mob@2x-min.png 2x,
-                ./images/slider-pic71-mob@3x-min.png 3x
-              "
-              media="(max-width: 171px)"
-            />
-
-            <img
-              class="hero-img__slider"
-              src="./images/slider-pic71-mob-min.png"
-              alt="ice cream with six taste"
-              width="171px"
-            />
-          </picture>
-        </div>
+    <div class="f-video-container">
+      <div class="f-video-player">
+        <iframe
+          title="Replay: New Shepard Mission NS-19 Webcast"
+          width="652"
+          height="367"
+          src="https://www.youtube.com/embed/sR0s-ou5GyM?feature=oembed"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
-    </section>
+      <div class="f-video-cover">
+        <img
+          src="https://denis-creative.com/wp-content/uploads/2021/12/alpha-firefly-aerospace.jpg"
+          width="560"
+          height="315"
+          alt=""
+          class="wp-post-image"
+        />
+      </div>
+    </div>
+    <script>
+      jQuery(document).ready(function ($) {
+        (function initPlayVideo() {
+          var $videoCover = $(".f-video-cover");
+          var $videoPlayerIframe = $(".f-video-player iframe");
+
+          $videoCover.on("click", function () {
+            $videoCover.fadeOut();
+            $videoPlayerIframe[0].src += "&autoplay=1";
+          });
+        })();
+      });
+    </script>
   </body>
 </html>
