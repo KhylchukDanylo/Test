@@ -5,43 +5,111 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./CSS/styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./videotube/videotube.min.css" />
+    <script src="./videotube/videotube.min.js"></script>
   </head>
   <body>
-    <div class="f-video-container">
-      <div class="f-video-player">
-        <iframe
-          title="Replay: New Shepard Mission NS-19 Webcast"
-          width="652"
-          height="367"
-          src="https://www.youtube.com/embed/sR0s-ou5GyM?feature=oembed"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <div class="f-video-cover">
-        <img
-          src="https://denis-creative.com/wp-content/uploads/2021/12/alpha-firefly-aerospace.jpg"
-          width="560"
-          height="315"
-          alt=""
-          class="wp-post-image"
-        />
-      </div>
-    </div>
-    <script>
-      jQuery(document).ready(function ($) {
-        (function initPlayVideo() {
-          var $videoCover = $(".f-video-cover");
-          var $videoPlayerIframe = $(".f-video-player iframe");
+    <ul class="video__content">
+      <li>
+        <a href="https://youtu.be/C6cxWsTayAI" class="card__link tube">
+          <img
+            src="https://i.ytimg.com/vi/C6cxWsTayAI/maxresdefault.jpg"
+            alt=""
+          />
+        </a>
+      </li>
 
-          $videoCover.on("click", function () {
-            $videoCover.fadeOut();
-            $videoPlayerIframe[0].src += "&autoplay=1";
-          });
-        })();
-      });
-    </script>
+      <li>
+        <a href="https://youtu.be/ZD-ymO04w70" class="card__link tube">
+          <img
+            src="https://i.ytimg.com/vi/ZD-ymO04w70/maxresdefault.jpg"
+            alt=""
+          />
+        </a>
+      </li>
+
+      <li>
+        <a href="https://youtu.be/Uy2li11PXC8" class="card__link tube">
+          <img
+            src="https://i.ytimg.com/vi/Uy2li11PXC8/maxresdefault.jpg"
+            alt=""
+          />
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="https://www.youtube.com/watch?v=0gYhRh6S4C4"
+          class="card__link tube"
+        >
+          <img
+            src="https://i.ytimg.com/vi/0gYhRh6S4C4/maxresdefault.jpg"
+            alt=""
+          />
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="https://www.youtube.com/watch?v=vKYmg2AR2xo"
+          class="card__link tube"
+        >
+          <img
+            src="https://i.ytimg.com/vi/vKYmg2AR2xo/maxresdefault.jpg"
+            alt=""
+          />
+        </a>
+      </li>
+
+      <li>
+        <a href="https://youtu.be/BrUayeSPBLc" class="card__link tube">
+          <img
+            src="https://i.ytimg.com/vi/BrUayeSPBLc/maxresdefault.jpg"
+            alt=""
+          />
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="https://www.youtube.com/watch?v=RpkWkBH05ak"
+          class="card__link tube"
+        >
+          <img
+            src="https://i.ytimg.com/vi/RpkWkBH05ak/maxresdefault.jpg"
+            alt=""
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.youtube.com/watch?v=uWzxGJJ58iA"
+          class="card__link tube"
+        >
+          <img
+            src="https://i.ytimg.com/vi/uWzxGJJ58iA/maxresdefault.jpg"
+            alt=""
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.youtube.com/watch?v=LaJ6fKtz-cM"
+          class="card__link tube"
+        >
+          <img
+            src="https://i.ytimg.com/vi/LaJ6fKtz-cM/maxresdefault.jpg"
+            alt=""
+          />
+        </a>
+      </li>
+
+      <li>
+        <a href="https://www.youtube.com/watch?v=LaJ6fKtz-cM" class="tube">
+          видео
+        </a>
+      </li>
+    </ul>
   </body>
 </html>
