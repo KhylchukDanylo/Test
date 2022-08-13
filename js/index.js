@@ -109,21 +109,21 @@
 //   console.log(fruit);
 // }
 
-function findLongestWord(string) {
-  const arrWord = string.split(' ');
-  let maxLengString = '';
-  let numberLengthString = 0;
-  for (let i = 0; i < arrWord.length; i++) {
-    const elmArr = arrWord[i];
-    const arrElm = elmArr.split('');
-    if (arrElm.length > numberLengthString) {
-      maxLengString = elmArr;
-      numberLengthString = arrElm.length;
-    }
-  }
-  return maxLengString;
-}
+// function findLongestWord(string) {
+//   const arrWord = string.split(' ');
+//   let maxLengString = '';
+//   let numberLengthString = 0;
+//   for (let i = 0; i < arrWord.length; i++) {
+//     const elmArr = arrWord[i];
+//     const arrElm = elmArr.split('');
+//     if (arrElm.length > numberLengthString) {
+//       maxLengString = elmArr;
+//       numberLengthString = arrElm.length;
+//     }
+//   }
+//   return maxLengString;
+// }
 
-console.log(findLongestWord('The quick brown fox jumped over the lazy dog'));
-console.log(findLongestWord('Google do a roll'));
-console.log(findLongestWord('May the force be with you'));
+// console.log(findLongestWord('The quick brown fox jumped over the lazy dog'));
+// console.log(findLongestWord('Google do a roll'));
+// console.log(findLongestWord('May the force be with you'));
