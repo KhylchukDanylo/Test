@@ -127,3 +127,101 @@
 // console.log(findLongestWord('The quick brown fox jumped over the lazy dog'));
 // console.log(findLongestWord('Google do a roll'));
 // console.log(findLongestWord('May the force be with you'));
+
+// function makeStickers(detailsCount, robotPart) {
+//   let a = [];
+//   for (let i = 1; i <= detailsCount; i++) {
+//     if (detailsCount !== 0) {
+//       a.push(`${robotPart} detail #${i}`);
+//     }
+//   }
+//   return a;
+// }
+
+// console.log(makeStickers(3, 'Body'));
+// console.log(makeStickers(4, 'Head'));
+// console.log(makeStickers(0, 'Foot'));
+
+// function isSorted(boxNumbers) {
+//   const a = true;
+
+//   for (let i = 0; i < boxNumbers.length; i++) {
+//     if (i + 1 === boxNumbers.length || boxNumbers.length === 1) {
+//       return a;
+//     } else if (boxNumbers[i + 1] >= boxNumbers[i]) {
+//     } else {
+//       return false;
+//     }
+//   }
+//   return a;
+// }
+// console.log(isSorted([1, 2, 3, 4, 5]));
+// console.log(locationisSorted([0, 1, 1, 1, 2]));
+// console.log(isSorted([1, 2, 11]));
+// console.log(isSorted([5]));
+// console.log(isSorted([]));
+// console.log(isSorted([0, 3, 1, 2, 2, 2]));
+// console.log(isSorted([1, 11, 2]));
+
+// function getLocation(coordinates, commands) {
+//   let a = coordinates;
+//   for (let i = 0; i < commands.length; i++) {
+//     if (commands[i] === 'forward') {
+//       a = [a[0], a[1] + 1];
+//     } else if (commands[i] === 'back') {
+//       a = [a[0], a[1] - 1];
+//     } else if (commands[i] === 'right') {
+//       a = [a[0] + 1, a[1]];
+//     } else if (commands[i] === 'left') {
+//       a = [a[0] - 1, a[1]];
+//     }
+//   }
+//   return a;
+// }
+
+// console.log(getLocation([0, 0], ['forward', 'right']));
+// console.log(getLocation([2, 3], ['back', 'back', 'back', 'right']));
+
+// function getPlan(startProduction, numberOfMonths, percent) {
+//   let a = startProduction;
+//   const g = [];
+//   for (let i = 0; i < numberOfMonths; i++) {
+//     a = Math.floor(a + (a / 100) * percent);
+//     g.push(a);
+//   }
+//   return g;
+// }
+
+// console.log(getPlan(10, 4, 30));
+// console.log(getPlan(1000, 6, 20));
+
+// function getSpeedStatistic(testResults) {
+//   let maxSpeed = 0;
+//   let minSpeed = 0;
+//   let midlSpeed = 0;
+//   if (testResults.length === 0) {
+//     return [0, 0, 0];
+//   }
+//   for (let i = 0; i < testResults.length; i++) {
+//     if (testResults[i] >= maxSpeed) {
+//       maxSpeed = testResults[i];
+//     }
+//   }
+//   minSpeed = maxSpeed;
+
+//   for (let i = 0; i < testResults.length; i++) {
+//     if (testResults[i] <= minSpeed) {
+//       minSpeed = testResults[i];
+//     }
+//     midlSpeed = midlSpeed + testResults[i];
+//   }
+//   midlSpeed = Math.floor(midlSpeed / testResults.length);
+//   return [minSpeed, maxSpeed, midlSpeed];
+// }
+// console.log(getSpeedStatistic([]));
+// console.log(getSpeedStatistic([10]));
+// console.log(getSpeedStatistic([8, 9, 3, 12]));
+// console.log(getSpeedStatistic([10, 10, 11, 9, 12, 8]));
+
+// console.log(Array(1, 4, 5, 6));
+// console.log(new Array(1, 4, 5, 6));
