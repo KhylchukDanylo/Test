@@ -225,3 +225,120 @@
 
 // console.log(Array(1, 4, 5, 6));
 // console.log(new Array(1, 4, 5, 6));
+
+// const apartment = {
+//   imgUrl: 'https://via.placeholder.com/640x480',
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4.7,
+//   price: 5000,
+//   tags: ['premium', 'promoted', 'top', 'trusted'],
+//   owner: {
+//     name: 'Henry Sibola',
+//     phone: '982-126-1588',
+//     email: 'henry.carter@aptmail.com',
+//   },
+// };
+
+// apartment.area = 60;
+// apartment.rooms = 3;
+// apartment.location = { country: 'Jamaica', city: 'Kingston' };
+
+// console.log(apartment);
+
+// const colors = [
+//   { hex: '#f44336', rgb: '244,67,54' },
+//   { hex: '#2196f3', rgb: '33,150,243' },
+//   { hex: '#4caf50', rgb: '76,175,80' },
+//   { hex: '#ffeb3b', rgb: '255,235,59' },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+
+// for (let i = 0; i < colors.length; i++) {
+//   let a = colors[i];
+//   hexColors.push(a.hex);
+//   rgbColors.push(a.rgb);
+// }
+
+// console.log(hexColors);
+// console.log(rgbColors);
+
+// const colors = [
+//   { hex: '#f44336', rgb: '244,67,54' },
+//   { hex: '#2196f3', rgb: '33,150,243' },
+//   { hex: '#4caf50', rgb: '76,175,80' },
+//   { hex: '#ffeb3b', rgb: '255,235,59' },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+
+// for (const key of colors) {
+//   hexColors.push(key.hex);
+//   rgbColors.push(key.rgb);
+// }
+// console.log(hexColors);
+// console.log(rgbColors);
+
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function getProductPrice(productName) {
+//   for (const key of products) {
+//     if (key.name === productName) {
+//       return key.price;
+//     }
+//   }
+//   return null;
+// }
+
+// console.log(getProductPrice('Radar'));
+
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//   const propValues = [];
+//   for (const key of products) {
+//     const keys = Object.keys(key);
+//     const values = Object.values(key);
+
+//     if (key.hasOwnProperty(propName)) {
+//       for (let i = 0; i < keys.length; i++) {
+//         if (keys[i] === propName) {
+//           propValues.push(values[i]);
+//         }
+//       }
+//     }
+//   }
+//   return propValues;
+// }
+
+// console.log(getAllPropValues('name'));
+
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function calculateTotalPrice(productName) {
+//   for (const key of products) {
+//     if (key.name === productName) {
+//       return key.price * key.quantity;
+//     }
+//   }
+//   return 0;
+// }
+
+// console.log(calculateTotalPrice('Radar'));
