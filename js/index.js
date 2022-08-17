@@ -342,3 +342,27 @@
 // }
 
 // console.log(calculateTotalPrice('Radar'));
+
+// function findMatches(arr, ...numbers) {
+//   const matches = [];
+//   for (const number of numbers) {
+//     if (arr.includes(number)) {
+//       matches.push(number);
+//     }
+//   }
+//   return matches;
+// }
+
+// console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
+
+const bookShelf = {
+  books: ['The last kingdom', 'Haze', 'The guardian of dreams'],
+  updateBook(oldName, newName) {
+    const indexOldBook = this.books.indexOf(oldName);
+    const newNameArr = this.books;
+    let a = newNameArr.splice(indexOldBook, 1);
+    a = newNameArr.splice(indexOldBook, 0, newName);
+  },
+};
+
+console.log(bookShelf.updateBook('Haze', 'Dungeon chronicles'));
