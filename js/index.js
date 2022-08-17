@@ -355,14 +355,74 @@
 
 // console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
 
-const bookShelf = {
-  books: ['The last kingdom', 'Haze', 'The guardian of dreams'],
-  updateBook(oldName, newName) {
-    const indexOldBook = this.books.indexOf(oldName);
-    const newNameArr = this.books;
-    let a = newNameArr.splice(indexOldBook, 1);
-    a = newNameArr.splice(indexOldBook, 0, newName);
+// const bookShelf = {
+//   books: ['The last kingdom', 'Haze', 'The guardian of dreams'],
+//   updateBook(oldName, newName) {
+//     const indexOldBook = this.books.indexOf(oldName);
+//     const newNameArr = this.books;
+//     let a = newNameArr.splice(indexOldBook, 1);
+//     a = newNameArr.splice(indexOldBook, 0, newName);
+//   },
+// };
+
+// console.log(bookShelf.updateBook('Haze', 'Dungeon chronicles'));
+
+// const atTheOldToad = {
+//   potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
+//   removePotion(potionName) {
+//     if (this.potions.includes(potionName)) {
+//       const index = this.potions.indexOf(potionName);
+//       this.potions.splice(index, 1);
+//     }
+//   },
+// };
+
+// console.log(atTheOldToad.removePotion('Speed potion'));
+
+const atTheOldToad = {
+  potions: [
+    { name: 'Speed potion', price: 460 },
+    { name: 'Dragon breath', price: 780 },
+    { name: 'Stone skin', price: 520 },
+  ],
+  getPotions() {
+    const arrGetPotions = [];
+    for (const potion of this.potions) {
+      arrGetPotions.push(potion);
+    }
+    return arrGetPotions;
+  },
+  addPotion(newPotion) {
+    if (this.potions.includes(newPotion)) {
+      return `Error! Potion ${newPotion} is already in your inventory!`;
+    }
+
+    this.potions.push(newPotion);
+    const arrGetPotions = [];
+    for (const potion of this.potions) {
+      arrGetPotions.push(potion);
+    }
+    return arrGetPotions;
+  },
+  removePotion(potionName) {
+    const potionIndex = this.potions.indexOf(potionName);
+
+    if (potionIndex === -1) {
+      return `Potion ${potionName} is not in inventory!`;
+    }
+
+    this.potions.splice(potionIndex, 1);
+  },
+  updatePotionName(oldName, newName) {
+    const potionIndex = this.potions.indexOf(oldName);
+
+    if (potionIndex === -1) {
+      return `Potion ${oldName} is not in inventory!`;
+    }
+
+    this.potions.splice(potionIndex, 1, newName);
   },
 };
-
-console.log(bookShelf.updateBook('Haze', 'Dungeon chronicles'));
+console.log(atTheOldToad);
+console.log(atTheOldToad.getPotions());
+console.log(atTheOldToad.addPotion({ name: 'Invisibility', price: 620 }));
