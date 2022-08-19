@@ -386,58 +386,47 @@ const atTheOldToad = {
     { name: 'Stone skin', price: 520 },
   ],
   getPotions() {
-    const arrGetPotions = [];
-    for (const potion of this.potions) {
-      arrGetPotions.push(potion);
-    }
-    return arrGetPotions;
+    return this.potions;
   },
   addPotion(newPotion) {
-    const nameNewPotion = Object.values(newPotion);
-
-    for (const potion of this.potions) {
-      const namePotion = Object.values(potion);
-      if (namePotion[0] === nameNewPotion[0]) {
-        return `Error! Potion ${nameNewPotion[0]} is already in your inventory!`;
+    const { potions } = this;
+    const nameNew = Object.values(newPotion);
+    for (let i = 0; i < potions.length; i++) {
+      const { name } = potions[i];
+      if (nameNew[0] === name) {
+        return `Error! Potion ${name} is already in your inventory!`;
       }
     }
     this.potions.push(newPotion);
     return this.potions;
   },
   removePotion(potionName) {
-    for (const potion of this.potions) {
-      const valPotions = Object.values(potion);
-      // console.log(valPotions[0] === potionName);
-      if (valPotions[0] === potionName) {
-        const index = this.potions.indexOf(potion);
-        this.potions.splice(index, 1);
-        return this.potions;
+    const { potions } = this;
+    for (let i = 0; i < potions.length; i++) {
+      const { name } = potions[i];
+      if (potionName === name) {
+        potions.splice(i, 1);
+        return;
       }
     }
-
     return `Potion ${potionName} is not in inventory!`;
   },
   updatePotionName(oldName, newName) {
-    const newPotions = [];
-
-    for (const potion of this.potions) {
-      const namePotion = Object.values(potion);
-      if (namePotion[0] === oldName) {
-        newPotions.push({ name: newName, price: namePotion[1] });
-      } else {
-        newPotions.push(potion);
+    for (const a of this.potions) {
+      if (a.name === oldName) {
+        a.name = newName;
+        return this.potions;
       }
     }
-    this.potions = [...newPotions];
-    return;
+    return this.potions;
   },
 };
 // console.log(atTheOldToad);
 // console.log(atTheOldToad.getPotions());
-console.log(atTheOldToad.addPotion({ name: 'Invisibility', price: 620 }));
-console.log(atTheOldToad.addPotion({ name: 'Dragon breath', price: 780 }));
+// console.log(atTheOldToad.addPotion({ name: 'Invisibility', price: 620 }));
+// console.log(atTheOldToad.addPotion({ name: 'Dragon breath', price: 780 }));
 // console.log(atTheOldToad.removePotion('Dragon breath'));
-// console.log(atTheOldToad.updatePotionName('Dragon breath', 'Polymorth'));
+console.log(atTheOldToad.updatePotionName('Dragon breath', 'Polymorth'));
 // const t = [5, 'Hello', 3, 'World'];
 // const [a, d, f, y] = t;
 // console.log(a);
