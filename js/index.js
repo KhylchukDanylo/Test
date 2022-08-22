@@ -379,56 +379,99 @@
 
 // console.log(atTheOldToad.removePotion('Speed potion'));
 
-const atTheOldToad = {
-  potions: [
-    { name: 'Speed potion', price: 460 },
-    { name: 'Dragon breath', price: 780 },
-    { name: 'Stone skin', price: 520 },
-  ],
-  getPotions() {
-    return this.potions;
-  },
-  addPotion(newPotion) {
-    const { potions } = this;
-    const nameNew = Object.values(newPotion);
-    for (let i = 0; i < potions.length; i++) {
-      const { name } = potions[i];
-      if (nameNew[0] === name) {
-        return `Error! Potion ${name} is already in your inventory!`;
-      }
-    }
-    this.potions.push(newPotion);
-    return this.potions;
-  },
-  removePotion(potionName) {
-    const { potions } = this;
-    for (let i = 0; i < potions.length; i++) {
-      const { name } = potions[i];
-      if (potionName === name) {
-        potions.splice(i, 1);
-        return;
-      }
-    }
-    return `Potion ${potionName} is not in inventory!`;
-  },
-  updatePotionName(oldName, newName) {
-    for (const a of this.potions) {
-      if (a.name === oldName) {
-        a.name = newName;
-        return this.potions;
-      }
-    }
-    return this.potions;
-  },
-};
+// const atTheOldToad = {
+//   potions: [
+//     { name: 'Speed potion', price: 460 },
+//     { name: 'Dragon breath', price: 780 },
+//     { name: 'Stone skin', price: 520 },
+//   ],
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(newPotion) {
+//     const { potions } = this;
+//     const nameNew = Object.values(newPotion);
+//     for (let i = 0; i < potions.length; i++) {
+//       const { name } = potions[i];
+//       if (nameNew[0] === name) {
+//         return `Error! Potion ${name} is already in your inventory!`;
+//       }
+//     }
+//     this.potions.push(newPotion);
+//     return this.potions;
+//   },
+//   removePotion(potionName) {
+//     const { potions } = this;
+//     for (let i = 0; i < potions.length; i++) {
+//       const { name } = potions[i];
+//       if (potionName === name) {
+//         potions.splice(i, 1);
+//         return;
+//       }
+//     }
+//     return `Potion ${potionName} is not in inventory!`;
+//   },
+//   updatePotionName(oldName, newName) {
+//     for (const a of this.potions) {
+//       if (a.name === oldName) {
+//         a.name = newName;
+//         return this.potions;
+//       }
+//     }
+//     return this.potions;
+//   },
+// };
 // console.log(atTheOldToad);
 // console.log(atTheOldToad.getPotions());
 // console.log(atTheOldToad.addPotion({ name: 'Invisibility', price: 620 }));
 // console.log(atTheOldToad.addPotion({ name: 'Dragon breath', price: 780 }));
 // console.log(atTheOldToad.removePotion('Dragon breath'));
-console.log(atTheOldToad.updatePotionName('Dragon breath', 'Polymorth'));
+// console.log(atTheOldToad.updatePotionName('Dragon breath', 'Polymorth'));
 // const t = [5, 'Hello', 3, 'World'];
 // const [a, d, f, y] = t;
 // console.log(a);
 // console.log(d, y);
 // console.log(f);
+
+// function greet(name) {
+//   consle.log(`Добро пожаловать ${name}.`);
+//   return;
+// }
+
+// function registerGuest(name, callback) {
+//   console.log(`Регистрируем гостя ${name}.`);
+//   callback(name);
+//   return;
+// }
+
+// console.log(registerGuest('Mango', greet));
+
+// const pizzaPalace = {
+//   pizzas: ['Ultracheese', 'Smoked', 'Four meats'],
+//   order(pizzaName, onSuccess, onError) {
+//     for (let i = 0; i < this.pizzas.length; i++) {
+//       // console.log(this.pizzas[i], pizzaName);
+//       if (this.pizzas[i] === pizzaName) {
+//         return onSuccess(pizzaName);
+//       }
+//     }
+//     return onError(pizzaName);
+//   },
+// };
+// // Change code above this line
+
+// // Callback for onSuccess
+// function makePizza(pizzaName) {
+//   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
+
+// // Callback for onError
+// function onOrderError(error) {
+//   return `Error! ${error}`;
+// }
+
+// // Method calls with callbacks
+// console.log(pizzaPalace.order('Smoked', makePizza, onOrderError));
+// console.log(pizzaPalace.order('Four meats', makePizza, onOrderError));
+// console.log(pizzaPalace.order('Big Mike', makePizza, onOrderError));
+// console.log(pizzaPalace.order('Vienna', makePizza, onOrderError));
