@@ -457,7 +457,7 @@
 //     }
 //     return onError(pizzaName);
 //   },
-// };
+// };     fc
 // // Change code above this line
 
 // // Callback for onSuccess
@@ -475,3 +475,49 @@
 // console.log(pizzaPalace.order('Four meats', makePizza, onOrderError));
 // console.log(pizzaPalace.order('Big Mike', makePizza, onOrderError));
 // console.log(pizzaPalace.order('Vienna', makePizza, onOrderError));
+
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     genres: ['adventure', 'history'],
+//   },
+//   {
+//     title: 'Beside Still Waters',
+//     author: 'Robert Sheckley',
+//     genres: ['fiction'],
+//   },
+//   {
+//     title: 'Redder Than Blood',
+//     author: 'Tanith Lee',
+//     genres: ['horror', 'mysticism'],
+//   },
+// ];
+// // Change code below this line
+
+// const genres = books.flatMap(genre => genre.genres);
+
+// console.log(genres);
+
+// const players = [
+//   { name: 'Mango', playtime: 1270, gamesPlayed: 4 },
+//   { name: 'Poly', playtime: 469, gamesPlayed: 2 },
+//   { name: 'Ajax', playtime: 690, gamesPlayed: 3 },
+//   { name: 'Kiwi', playtime: 241, gamesPlayed: 1 },
+// ];
+// // Change code below this line
+
+// const totalAveragePlaytimePerGame = players.reduce((total, time) => {
+//   const alltime = time.playtime / time.gamesPlayed;
+//   return total + alltime;
+// }, 0);
+// console.log(totalAveragePlaytimePerGame);
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// const authors = ['Tanith Lee', 'Bernard Cornwell', 'Robert Sheckley', 'Fyodor Dostoevsky'];
+// // Change code below this line
+
+// const ascendingReleaseDates = [...releaseDates].sort();
+
+// const alphabeticalAuthors = [...authors].sort();
+// console.log(ascendingReleaseDates, `-----`, releaseDates, `===`, ascendingReleaseDates === releaseDates);
+// console.log(alphabeticalAuthors, `-----`, authors, `===`, alphabeticalAuthors === authors);
