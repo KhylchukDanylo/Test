@@ -522,6 +522,45 @@
 // console.log(ascendingReleaseDates, `-----`, releaseDates, `===`, ascendingReleaseDates === releaseDates);
 // console.log(alphabeticalAuthors, `-----`, authors, `===`, alphabeticalAuthors === authors);
 
-const a = [1, 4, 5, 6, 6];
+class StringBuilder {
+  constructor(initialValue) {
+    this.value = initialValue;
+  }
+  getValue() {
+    return this.value;
+  }
+  padEnd(str) {
+    // console.log(this.value, 'ggg');
+    const strArrVal = this.value.split('');
 
-console.log('🚀 ~ a', a);
+    strArrVal.push(str);
+
+    this.value = strArrVal.join('');
+    // console.log(this.value, 'gg');
+  }
+  padStart(str) {
+    const strArrVal = this.value.split('');
+    strArrVal.splice(0, 0, str);
+    this.value = strArrVal.join('');
+  }
+  padBoth(str) {
+    const strArrVal = this.value.split('');
+
+    strArrVal.push(str);
+
+    this.value = strArrVal.join('');
+    strArrVal.splice(0, 0, str);
+    this.value = strArrVal.join('');
+  }
+}
+
+// Change code above this line
+const builder = new StringBuilder('.');
+console.log(builder.getValue()); // "."
+builder.padStart('^');
+console.log(builder.getValue()); // "^."
+builder.padEnd('^');
+console.log(builder.getValue()); // "^.^"
+builder.padBoth('=');
+console.log(builder.getValue()); // "=^.^="
+// console.log(builder.value);
