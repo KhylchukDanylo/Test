@@ -523,6 +523,7 @@
 // console.log(alphabeticalAuthors, `-----`, authors, `===`, alphabeticalAuthors === authors);
 
 class StringBuilder {
+  #padBoth;
   constructor(initialValue) {
     this.value = initialValue;
   }
@@ -543,7 +544,7 @@ class StringBuilder {
     strArrVal.splice(0, 0, str);
     this.value = strArrVal.join('');
   }
-  padBoth(str) {
+  #padBoth(str) {
     const strArrVal = this.value.split('');
 
     strArrVal.push(str);
