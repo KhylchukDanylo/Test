@@ -522,46 +522,51 @@
 // console.log(ascendingReleaseDates, `-----`, releaseDates, `===`, ascendingReleaseDates === releaseDates);
 // console.log(alphabeticalAuthors, `-----`, authors, `===`, alphabeticalAuthors === authors);
 
-class StringBuilder {
-  #padBoth;
-  constructor(initialValue) {
-    this.value = initialValue;
-  }
-  getValue() {
-    return this.value;
-  }
-  padEnd(str) {
-    // console.log(this.value, 'ggg');
-    const strArrVal = this.value.split('');
+// class StringBuilder {
+//   #padBoth;
+//   constructor(initialValue) {
+//     this.value = initialValue;
+//   }
+//   getValue() {
+//     return this.value;
+//   }
+//   padEnd(str) {
+//     // console.log(this.value, 'ggg');
+//     const strArrVal = this.value.split('');
 
-    strArrVal.push(str);
+//     strArrVal.push(str);
 
-    this.value = strArrVal.join('');
-    // console.log(this.value, 'gg');
-  }
-  padStart(str) {
-    const strArrVal = this.value.split('');
-    strArrVal.splice(0, 0, str);
-    this.value = strArrVal.join('');
-  }
-  #padBoth(str) {
-    const strArrVal = this.value.split('');
+//     this.value = strArrVal.join('');
+//     // console.log(this.value, 'gg');
+//   }
+//   padStart(str) {
+//     const strArrVal = this.value.split('');
+//     strArrVal.splice(0, 0, str);
+//     this.value = strArrVal.join('');
+//   }
+//   #padBoth(str) {
+//     const strArrVal = this.value.split('');
 
-    strArrVal.push(str);
+//     strArrVal.push(str);
 
-    this.value = strArrVal.join('');
-    strArrVal.splice(0, 0, str);
-    this.value = strArrVal.join('');
-  }
+//     this.value = strArrVal.join('');
+//     strArrVal.splice(0, 0, str);
+//     this.value = strArrVal.join('');
+//   }
+// }
+
+// // Change code above this line
+// const builder = new StringBuilder('.');
+// console.log(builder.getValue()); // "."
+// builder.padStart('^');
+// console.log(builder.getValue()); // "^."
+// builder.padEnd('^');
+// console.log(builder.getValue()); // "^.^"
+// builder.padBoth('=');
+// console.log(builder.getValue()); // "=^.^="
+// // console.log(builder.value);
+const urs = `https://the-one-api.dev/v2/`;
+function ff() {
+  fetch(`${urs}sharacter?limit=10&page=1`).then(data => console.log(data));
 }
-
-// Change code above this line
-const builder = new StringBuilder('.');
-console.log(builder.getValue()); // "."
-builder.padStart('^');
-console.log(builder.getValue()); // "^."
-builder.padEnd('^');
-console.log(builder.getValue()); // "^.^"
-builder.padBoth('=');
-console.log(builder.getValue()); // "=^.^="
-// console.log(builder.value);
+ff();
